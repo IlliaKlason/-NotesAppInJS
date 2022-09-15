@@ -81,9 +81,10 @@ function buildForm(note) {
         <input class="cancel" type="button" value="Cancel">
         <input id="submit-button" type="submit" value="Submit" > 
     `;
-   form.getElementsByClassName('cancel')[0].addEventListener("click", () => {
+   form.getElementsByClassName('cancel')[0].addEventListener("click", (e) => {
       document.getElementsByClassName('wrapper-div')[0].remove();
    });
+
 
    form.onsubmit = (event) => {
       event.preventDefault();
@@ -111,6 +112,7 @@ function buildForm(note) {
    wrapperDiv.append(form);
 
    document.body.prepend(wrapperDiv);
+
 }
 
 //table functions
