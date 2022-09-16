@@ -196,4 +196,13 @@ let UNARCHIVE_ICON = `<?xml version="1.0" standalone="no"?>
 </g>
 </svg>`;
 
-export { ARCHIVE_ICON, UNARCHIVE_ICON, EDIT_ICON, DELETE_ICON, IDEA_ICON, QUOTE_ICON, TASK_ICON, THOUGHT_ICON }
+export {
+   ARCHIVE_ICON,
+   UNARCHIVE_ICON,
+   EDIT_ICON,
+   DELETE_ICON,
+   IDEA_ICON,
+   QUOTE_ICON,
+   TASK_ICON,
+   THOUGHT_ICON,
+};

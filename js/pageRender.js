@@ -5,7 +5,7 @@ let statisticsTable = document.getElementById('stats-table'),
    notesTable = document.getElementById('active-archive-table'),
    activeNoteTableShown = true;
 
-//dynamic loading svg icons so they could be styled
+
 function loadIconsIntoHeader() {
    Array.from(document.getElementsByClassName('header-icon')).forEach(col => {
       if (col.classList.contains('archive'))
@@ -15,7 +15,7 @@ function loadIconsIntoHeader() {
    });
 }
 
-//Note function
+
 function createNote(note) {
    notes.push(note);
    refreshTables();
@@ -55,7 +55,6 @@ function changeArchiveState(note) {
    showAnnouncer(`Note ${(activeNoteTableShown) ? 'archived' : 'unarchived'} successfully!`);
 }
 
-//announcer for users activity
 function showAnnouncer(text, error) {
    let announcer = document.getElementById('announcer')
    announcer.style.opacity = '1';
@@ -115,7 +114,6 @@ function buildForm(note) {
 
 }
 
-//table functions
 function refreshTables() {
    clearAllTables();
    buildNotesTable();
