@@ -5,7 +5,7 @@ let statisticsTable = document.getElementById('stats-table'),
    notesTable = document.getElementById('active-archive-table'),
    activeNoteTableShown = true;
 
-//dynamic loading svg icons so they could be styled
+
 function loadIconsIntoHeader() {
    Array.from(document.getElementsByClassName('header-icon')).forEach(col => {
       if (col.classList.contains('archive'))
@@ -15,7 +15,7 @@ function loadIconsIntoHeader() {
    });
 }
 
-//Note function
+
 function createNote(note) {
    notes.push(note);
    refreshTables();
@@ -55,7 +55,6 @@ function changeArchiveState(note) {
    showAnnouncer(`Note ${(activeNoteTableShown) ? 'archived' : 'unarchived'} successfully!`);
 }
 
-//announcer for users activity
 function showAnnouncer(text, error) {
    let announcer = document.getElementById('announcer')
    announcer.style.opacity = '1';
@@ -81,9 +80,10 @@ function buildForm(note) {
         <input class="cancel" type="button" value="Cancel">
         <input id="submit-button" type="submit" value="Submit" > 
     `;
-   form.getElementsByClassName('cancel')[0].addEventListener("click", () => {
+   form.getElementsByClassName('cancel')[0].addEventListener("click", (e) => {
       document.getElementsByClassName('wrapper-div')[0].remove();
    });
+
 
    form.onsubmit = (event) => {
       event.preventDefault();
@@ -111,9 +111,9 @@ function buildForm(note) {
    wrapperDiv.append(form);
 
    document.body.prepend(wrapperDiv);
+
 }
 
-//table functions
 function refreshTables() {
    clearAllTables();
    buildNotesTable();

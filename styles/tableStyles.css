@@ -5,10 +5,10 @@ table {
 }
 tr th {
   color: ghostwhite;
-  background-color: cadetblue;
+  background-color: grey;
 }
 tr td {
-  background-color: #b6d7d7;
+  background-color: bisque;
 }
 tr td:first-child,
 tr th:first-child {
