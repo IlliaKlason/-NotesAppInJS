@@ -220,6 +220,5 @@ export {
    loadIconsIntoHeader,
    notes
 }
-
 document.getElementById("table-switcher").addEventListener("click", switchTables);
 document.getElementById("create-note-button").addEventListener("click", buildForm);
